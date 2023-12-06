@@ -1,0 +1,15 @@
+{
+  "name": "copypasta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.0.253",
+    "typescript": "^5.3.2"
+  }
+}
