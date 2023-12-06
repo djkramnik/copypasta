@@ -11,7 +11,8 @@ const handleTabUpdate: TabUpdateHandler = (
 ) => {
   // if the changeInfo is complete, match the url to the script and load script if any
   console.log('changeInfo', tabId, changeInfo)
-
+  console.log('matche?', matchUrlToScript(tab.url ?? ''))
+  
 }
 
 chrome.tabs.onUpdated.addListener(handleTabUpdate)

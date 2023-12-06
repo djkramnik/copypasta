@@ -2,14 +2,16 @@
   "name": "copypasta",
   "version": "1.0.0",
   "description": "",
-  "main": "background.js",
   "scripts": {
-    "build": "tsc"
+    "compile": "tsc",
+    "bundle": "browserify ./dist/index.js > ./dist/background.js",
+    "build": "npm run compile && npm run bundle"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/chrome": "^0.0.253",
+    "browserify": "^17.0.0",
     "typescript": "^5.3.2"
   }
 }

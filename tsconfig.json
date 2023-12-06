@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "outDir": "dist",
+    "target": "ES2017",
+    "module": "commonjs",
+    "outDir": "./dist",
     "strict": true,
-    "lib": ["esnext", "dom"],
+    "lib": ["es2015", "dom"],
+    "noEmitHelpers": false,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
+    "allowJs": true,
+    "declaration": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
