@@ -1,3 +1,5 @@
+import { caribouScript } from './content-scripts/caribou'
+import { healthGovScript } from './content-scripts/healthgov'
 import { 
   matchUrlToScript,
   ScriptType
@@ -36,10 +38,4 @@ const handleTabUpdate: TabUpdateHandler = (
 
 chrome.tabs.onUpdated.addListener(handleTabUpdate)
 
-function healthGovScript() {
-  console.log('IM RELOADED! health gov edition')
-}
 
-function caribouScript() {
-  console.log('IM RELOADED!!! caribou edition')
-}
