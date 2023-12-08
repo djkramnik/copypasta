@@ -5,7 +5,7 @@ function caribouScript() {
     console.log('IM treading lightly -- caribou edition!?');
     // 
     opportunisticallyInjectButton(injectCaribouDom);
-    function opportunisticallyInjectButton(inject, pause = 1000) {
+    function opportunisticallyInjectButton(inject, pause = 3000) {
         console.log('a firm purpose to change', inject);
         const { stop } = inject();
         if (stop) {

@@ -5,7 +5,7 @@ export function healthGovScript() {
 
   function opportunisticallyInjectButton(
     inject: () => { stop: boolean },
-    pause: number = 1000
+    pause: number = 3000
     ) {
     console.log('no more couch surfing', inject)
     const { stop } = inject()
@@ -37,11 +37,15 @@ export function healthGovScript() {
     const planTitleClassName = `.pet-c-plan-title__issuer`
     const planTitles = document.querySelectorAll(planTitleClassName)
     
-    planTitles.forEach(el => {
+    planTitles.forEach((el, index) => {
+      if (!!el.querySelector(`#copy-extension-button-${index}`)) {
+        return
+      }
       const button = document.createElement('button')
       button.innerHTML = 'Copy'
       // @ts-ignore
       button.style = 'margin-left: 24px'
+      button.setAttribute('id', `copy-extension-button-${index}`)
       el.appendChild(button)
       button.addEventListener('click', (event) => {
         const searchResult = el?.parentNode?.parentNode ?? el

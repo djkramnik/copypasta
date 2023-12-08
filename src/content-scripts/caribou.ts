@@ -5,7 +5,7 @@ export function caribouScript() {
 
   function opportunisticallyInjectButton(
     inject: () => { stop: boolean },
-    pause: number = 1000
+    pause: number = 3000
     ) {
     console.log('a firm purpose to change', inject)
     const { stop } = inject()
