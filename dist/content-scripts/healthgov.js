@@ -30,17 +30,15 @@ function healthGovScript() {
         const planTitleClassName = `.pet-c-plan-title__issuer`;
         const planTitles = document.querySelectorAll(planTitleClassName);
         planTitles.forEach((el, index) => {
-            if (!!el.querySelector(`#copy-extension-button-${index}}`)) {
+            if (!!el.querySelector(`#copy-extension-button-${index}`)) {
                 return;
             }
-            console.log('just in case');
             const button = document.createElement('button');
             button.innerHTML = 'Copy';
             // @ts-ignore
             button.style = 'margin-left: 24px';
             button.setAttribute('id', `copy-extension-button-${index}`);
             el.appendChild(button);
-            console.log('burning to death in space');
             button.addEventListener('click', (event) => {
                 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7;
                 const searchResult = (_b = (_a = el === null || el === void 0 ? void 0 : el.parentNode) === null || _a === void 0 ? void 0 : _a.parentNode) !== null && _b !== void 0 ? _b : el;
